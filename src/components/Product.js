@@ -1,14 +1,14 @@
 import React from "react";
 
-export default function Product({ productDetails }) {
+export default function Product(props) {
   return (
     <div>
       <div className="row mt-2 d-flex align-items-center">
         <div className="col-5">
           <h2>
-            {productDetails.name}
+            {props.productDetails.name}
             <span className="badge bg-secondary m-2">
-              ₹{productDetails.price}
+              ₹{props.productDetails.price}
             </span>
           </h2>
         </div>
@@ -22,7 +22,7 @@ export default function Product({ productDetails }) {
               -
             </button>
             <button className="btn btn-warning" id="qty">
-              {productDetails.quantity}
+              {props.productDetails.quantity}
             </button>
             <button className="btn btn-success" type="button">
               +
